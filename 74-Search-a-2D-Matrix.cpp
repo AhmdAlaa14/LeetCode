@@ -17,8 +17,7 @@ public:
                     d = midRow - 1;
                 } else if (matrix[midRow][r] < target) {
                     u = midRow + 1;
-                } else if (matrix[midRow][0] <= target &&
-                           matrix[midRow][r] >= target) {
+                } else  {
                     break;
                 }
             }
