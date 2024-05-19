@@ -6,14 +6,15 @@ public:
         int max=0;
         int area=0;
         while(r>l){
-            int minHeight=((height[l]>height[r])?height[r]:height[l]);
-            area = (r-l )*minHeight ;
-            max=(max>area)?max:area;
+            int minHeight=0;
             if(height[l]>height[r]){
-                r--;
+                minHeight=height[r--];
             }else{
-                l++;
+                minHeight=height[l++];
             }
+            area = (r-l+1 )*minHeight ;
+            max=(max>area)?max:area;
+            
         }
         return max;
     }
