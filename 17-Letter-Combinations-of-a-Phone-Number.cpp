@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> letterCombinations(string digits) {
-        map<char, vector<char>> mp{
+        unordered_map<char, vector<char>> mp{
         {'2',{'a','b','c'}},
         {'3',{'d','e','f'}},
         {'4',{'g','h','i'}},
